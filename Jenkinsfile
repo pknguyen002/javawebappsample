@@ -21,7 +21,7 @@ node {
   
     stage('deploy') {
     def resourceGroup = 'jenkins-get-started-rg'
-    def webAppName = 'kimjava31647'
+    def webAppName = 'kimjava31647b'
 
     // login Azure
     withCredentials([azureServicePrincipal('AzureServicePrincipal')]) {
