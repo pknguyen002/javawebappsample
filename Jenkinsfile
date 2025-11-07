@@ -27,9 +27,11 @@ def webAppName = 'kimjava31647'
       withCredentials([azureServicePrincipal('AzureServicePrincipal')]) {
 
        sh '''
-az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
-az account set --subscription $AZURE_SUBSCRIPTION_ID
-'''
+az cloud set --name AzureCloud
+az account clear
+az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant c48f589c-6750-4f2a-ac8c-cfe675eb9d81
+az account set --subscription fc3a05c2-95b2-4838-90b3-3921132cce78
+
 
       }
       // get publish settings
