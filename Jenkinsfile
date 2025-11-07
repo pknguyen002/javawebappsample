@@ -1,3 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
+
 import groovy.json.JsonSlurper
 
 def getFtpPublishProfile(def publishProfilesJson) {
