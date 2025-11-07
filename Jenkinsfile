@@ -10,9 +10,6 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
-        }
-    }
-}
 
 import groovy.json.JsonSlurper
 
